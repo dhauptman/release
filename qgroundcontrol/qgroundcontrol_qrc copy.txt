@@ -248,6 +248,6 @@
         <file alias="Alert">resources/audio/alert.wav</file>
     </qresource>
     <qresource prefix="/">
-        <file>images/application-exit.png</file>
+        <file>../../../../Qt/Examples/Qt-5.4/serialport/terminal/images/application-exit.png</file>
     </qresource>
 </RCC>
