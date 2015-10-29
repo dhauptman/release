@@ -344,7 +344,8 @@ HEADERS += \
     src/terminalmainwindow.h \
     src/terminalsettingsdialog.h \
     src/terminalparser.h \
-    src/nema0183datacollection.h
+    src/nema0183datacollection.h \
+    src/wso100.h
 
 !iOSBuild {
 HEADERS += \
@@ -479,7 +480,8 @@ SOURCES += \
     src/terminalmainwindow.cpp \
     src/terminalsettingsdialog.cpp \
     src/terminalparser.cpp \
-    src/nema0183datacollection.cpp
+    src/nema0183datacollection.cpp \
+    src/wso100.cpp
 
 !iOSBuild {
 SOURCES += \

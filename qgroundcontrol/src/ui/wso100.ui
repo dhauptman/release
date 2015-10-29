@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>267</width>
-    <height>208</height>
+    <height>220</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -29,123 +29,136 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Output From WSO100</string>
   </property>
   <widget class="QLabel" name="COMPort">
    <property name="geometry">
     <rect>
      <x>20</x>
      <y>10</y>
-     <width>51</width>
+     <width>71</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>COM Port:</string>
+    <string>Pressure(P):</string>
    </property>
   </widget>
   <widget class="QLabel" name="dataBits">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>100</y>
-     <width>47</width>
-     <height>13</height>
+     <y>90</y>
+     <width>71</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Data Bits:</string>
+    <string>Humidity(?):</string>
    </property>
   </widget>
   <widget class="QLabel" name="baudrate">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>60</y>
-     <width>47</width>
-     <height>13</height>
+     <y>50</y>
+     <width>91</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Baudrate:</string>
+    <string>Temperature(C):</string>
    </property>
   </widget>
   <widget class="QLabel" name="stopBits">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>140</y>
-     <width>47</width>
-     <height>13</height>
+     <y>130</y>
+     <width>91</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Stop Bits:</string>
+    <string>Wind Speed(m/s):</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="comLineEdit">
+  <widget class="QLineEdit" name="ATMOSLineEdit">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>140</x>
      <y>10</y>
      <width>113</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>COM10</string>
+    <string>0</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="baudrateEdit">
+  <widget class="QLineEdit" name="outside_tLineEdit">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>60</y>
+     <x>140</x>
+     <y>50</y>
      <width>113</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>9600</string>
+    <string>0</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="dataBitsLineEdit">
+  <widget class="QLineEdit" name="outside_hLineEdit">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>100</y>
+     <x>140</x>
+     <y>90</y>
      <width>113</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>8</string>
+    <string>0</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="stopBitsLineEdit">
+  <widget class="QLineEdit" name="windSpeedLineEdit">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>140</y>
+     <x>140</x>
+     <y>130</y>
      <width>113</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>1</string>
+    <string>0</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="connectButton">
+  <widget class="QLabel" name="stopBits_2">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>20</x>
      <y>170</y>
-     <width>75</width>
-     <height>23</height>
+     <width>91</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Connect</string>
+    <string>Wind Angle(Deg):</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="windAngleLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>170</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>0</string>
    </property>
   </widget>
  </widget>

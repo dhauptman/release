@@ -13,6 +13,7 @@ class TerminalMainWindow;
 
 class TerminalConsole;
 class TerminalSettingsDialog;
+class wso100;
 
 class TerminalMainWindow : public QMainWindow
 {
@@ -37,6 +38,7 @@ private:
     Ui::TerminalMainWindow *ui;
     TerminalConsole *console;
     TerminalSettingsDialog *settings;
+    wso100 *wso;
     QSerialPort *serial;
 };
 

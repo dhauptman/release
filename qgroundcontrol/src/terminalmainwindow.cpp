@@ -2,7 +2,7 @@
 #include "ui_terminalmainwindow.h"
 #include "terminalconsole.h"
 #include "terminalsettingsdialog.h"
-#include "nema0183datacollection.h"
+#include "wso100.h"
 
 #include <QMessageBox>
 #include <QtSerialPort/QSerialPort>
@@ -13,6 +13,11 @@ TerminalMainWindow::TerminalMainWindow(QWidget *parent):
 {
     ui->setupUi(this);
 	console = new TerminalConsole;
+    wso = new wso100;
+	wso->setAllowedAreas(Qt::RightDockWidgetArea);
+	//wso->setWidget(wso);
+	addDockWidget(Qt::RightDockWidgetArea, wso);
+	tabifiedDockWidgets(wso);
     console->setEnabled(false);
     setCentralWidget(console);
     serial = new QSerialPort(this);
@@ -89,16 +94,9 @@ void TerminalMainWindow::writeData(const QByteArray &data)
 
 void TerminalMainWindow::readData()
 {
-	Nema0183DataCollection dataCollector;
     QByteArray data = serial->readAll();
     console->putData(data);
-
-	/*
-	ui->AtmosTextBox->setPlainText(dataCollector.get_ATMOS_DATA());
-	ui->OutsideHTextBox->setPlainText(dataCollector.get_OUTSIDE_H_Data());
-	ui->OutsideTTextBox->setPlainText(dataCollector.get_OUTSIDE_T_Data());
-	ui->WindTextBox->setPlainText(dataCollector.get_MVW_Data());
-	*/
+    wso->pushData();
 }
 
 

@@ -81,7 +81,8 @@ QString TerminalParser::MVW_Parsing(QString data)
     parsedString += "   Wind Speed: " + list.at(2) + " " + list.at(3) + "\n";
     parsedString += "   Status: " + list.at(3) + "\n";
 
-	dataCollector.set_MVW_Data(list.at(0) + "," + list.at(2));
+    dataCollector.set_MVW_Data_Angle(list.at(0));
+    dataCollector.set_MVW_Data_Speed(list.at(2));
     MVWOldString = MVWNewString;
 
     return(parsedString);

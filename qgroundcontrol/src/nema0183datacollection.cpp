@@ -1,7 +1,8 @@
 #include "nema0183datacollection.h"
 
 QString Nema0183DataCollection::ATMOS_DATA("");
-QString Nema0183DataCollection::MVW_Data("");
+QString Nema0183DataCollection::MVW_Data_Angle("");
+QString Nema0183DataCollection::MVW_Data_Speed("");
 QString Nema0183DataCollection::OUTSIDE_H_Data("");
 QString Nema0183DataCollection::OUTSIDE_T_Data("");
 
@@ -9,14 +10,24 @@ Nema0183DataCollection::Nema0183DataCollection(QWidget *parent)
 {
 }
 
-QString Nema0183DataCollection::get_MVW_Data()
+QString Nema0183DataCollection::get_MVW_Data_Angle()
 {
-    return MVW_Data;
+    return MVW_Data_Angle;
 }
 
-void Nema0183DataCollection::set_MVW_Data(const QString &value)
+void Nema0183DataCollection::set_MVW_Data_Angle(const QString &value)
 {
-    MVW_Data = value;
+    MVW_Data_Angle = value;
+}
+
+QString Nema0183DataCollection::get_MVW_Data_Speed()
+{
+    return MVW_Data_Speed;
+}
+
+void Nema0183DataCollection::set_MVW_Data_Speed(const QString &value)
+{
+    MVW_Data_Speed = value;
 }
 
 QString Nema0183DataCollection::get_OUTSIDE_H_Data()
